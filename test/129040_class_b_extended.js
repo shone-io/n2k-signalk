@@ -19,13 +19,13 @@ describe('129040 AIS Class B Extended Position Repeat', function () {
     tree.should.have.nested.property('design.length.overall', 16.0)
     tree.should.have.nested.property('design.aisShipType.value.id', 51)
     tree.should.have.nested.property('design.aisShipType.value.name', 'SAR')
-    tree.should.have.nested.property('design.beam.value', 4.0)
+    tree.should.have.nested.property('design.beam', 4.0)
     tree.should.have.nested.property(
       'navigation.destination.commonName.value',
       'HELSINKI LIFEBOAT'
     )
-    tree.navigation.position.longitude.should.equal(25.2026083)
-    tree.navigation.position.latitude.should.equal(60.217615)
+    tree.navigation.position.value.longitude.should.equal(25.2026083)
+    tree.navigation.position.value.latitude.should.equal(60.217615)
     tree.should.have.nested.property('navigation.courseOverGroundTrue')
     tree.should.have.nested.property(
       'navigation.courseOverGroundTrue.value',

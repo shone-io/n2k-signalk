@@ -37,9 +37,9 @@ module.exports = [
     node: 'navigation.headingTrue'
   },
   {
-    node: 'design.length',
+    node: '',
     value: function (n2k) {
-      return { overall: Number(n2k.fields.Length) }
+      return { design: { length: { overall: Number(n2k.fields.Length) } } }
     },
     filter: function (n2k) {
       return n2k.fields['Length']
@@ -55,8 +55,8 @@ module.exports = [
     }
   },
   {
-    node: 'design.beam',
-    source: 'Beam'
+    node: '',
+    value: n2k => ({ design: { beam: Number(n2k.fields['Beam']) } })
   },
   {
     node: 'sensors.ais.fromBow',

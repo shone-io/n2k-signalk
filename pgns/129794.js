@@ -16,18 +16,18 @@ module.exports = [
     source: 'Destination'
   },
   {
-    node: 'design.draft',
+    node: '',
     filter: function (n2k) {
-      return n2k.fields['Draft']
+      return Number(n2k.fields['Draft'])
     },
     value: function (n2k) {
-      return { maximum: n2k.fields['Draft'] }
+      return { design: { draft: { maximum: Number(n2k.fields['Draft']) } } }
     }
   },
   {
-    node: 'design.length',
+    node: '',
     value: function (n2k) {
-      return { overall: Number(n2k.fields.Length) }
+      return { design: { length: { overall: Number(n2k.fields.Length) } } }
     },
     filter: function (n2k) {
       return n2k.fields['Length']
@@ -43,8 +43,8 @@ module.exports = [
     }
   },
   {
-    node: 'design.beam',
-    source: 'Beam'
+    node: '',
+    value: n2k => ({ design: { beam: Number(n2k.fields['Beam']) } })
   },
   {
     node: 'sensors.ais.fromBow',

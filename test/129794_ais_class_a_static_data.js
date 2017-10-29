@@ -57,7 +57,7 @@ describe('129794 AIS Class A Static and Voyage Related Data', function () {
       'design.aisShipType.value.name',
       'Tanker hazard cat C'
     )
-    tree.should.have.nested.property('design.beam.value', 32.0)
+    tree.should.have.nested.property('design.beam', 32.0)
     tree.should.have.nested.property(
       'navigation.destination.commonName.value',
       'USA (BALTIMORE)'

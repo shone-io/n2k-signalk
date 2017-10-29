@@ -31,7 +31,7 @@ describe('130842 Simnet AIS Class B static data', function () {
     tree.should.have.nested.property('design.length.overall', 9.0)
     tree.should.have.nested.property('design.aisShipType.value.id', 36)
     tree.should.have.nested.property('design.aisShipType.value.name', 'Sailing')
-    tree.should.have.nested.property('design.beam.value', 4.0)
+    tree.should.have.nested.property('design.beam', 4.0)
     tree.should.have.nested.property('sensors.ais.fromBow.value', 6.0)
     tree.should.have.nested.property('sensors.ais.fromCenter.value', 0)
     delete tree.design.aisShipType
